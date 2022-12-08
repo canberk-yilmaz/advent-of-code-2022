@@ -25,20 +25,20 @@ for (let i = 0; i < SI.length; i++) {
         .reverse()
         .some((el) => {
           l++;
-          return Number(el) >= Number(SI[i][j]);
+          return el >= SI[i][j];
         });
       rightCurrent.split("").some((el) => {
         r++;
-        return Number(el) >= Number(SI[i][j]);
+        return el >= SI[i][j];
       });
       //reversed to fix direction
       topCurrent.reverse().some((el) => {
         t++;
-        return Number(el) >= Number(SI[i][j]);
+        return el >= SI[i][j];
       });
       bottomCurrent.some((el) => {
         b++;
-        return Number(el) >= Number(SI[i][j]);
+        return el >= SI[i][j];
       });
       let mul = l * r * t * b;
       max = Math.max(max, mul);
